@@ -23,7 +23,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Запуск тестів
-        run: pytest
+        run: PYTHONPATH=. pytest
 
   docker-build:
     needs: build-and-test
